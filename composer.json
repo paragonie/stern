@@ -1,6 +1,7 @@
 {
   "name": "paragonie/stern",
   "description": "Stern lets you built type-safe PHP projects, even if your project's users aren't writing type-safe code",
+  "license": "MIT",
   "autoload": {
     "psr-4": {
       "ParagonIE\\Stern\\": "src"
