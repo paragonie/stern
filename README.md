@@ -17,7 +17,7 @@ Using Stern is simply:
 2. Rename your methods from `whateverName` to `strictWhateverName`.
 3. Enjoy strict-typing whether your users like it or not.
 
-Exammple:
+## Example
 
 ```diff
   <?php
