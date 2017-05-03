@@ -16,17 +16,12 @@ trait SternTrait
      */
     public function __call($name, $arguments)
     {
-        $candidates = [
-            'strict' . \ucfirst($name),
-            'strict' . $name
-        ];
-        foreach ($candidates as $method) {
-            if (\method_exists($this, $method)) {
-                return $this->{$method}(...$arguments);
-            }
+        if (\method_exists($this, 'strict' . $name)) {
+            return $this->{'strict' . $name}(...$arguments);
         }
+        
         throw new \Error(
-            \sprintf('Destination proxy method %s not found on class %s', $name, \get_class($this))
+            \sprintf('Destination proxy method %s not found on class %s', 'strict' . $name, \get_class($this))
         );
     }
 }
