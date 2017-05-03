@@ -13,7 +13,7 @@ Stern lets you built type-safe PHP projects, even if your project's users aren't
 
 Using Stern is simply:
 
-1. Make your clas use the `SternTrait`.
+1. Make your class use the `SternTrait`.
 2. Rename your methods from `whateverName` to `strictWhateverName`.
 3. Enjoy strict-typing whether your users like it or not.
 
