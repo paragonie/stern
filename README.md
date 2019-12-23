@@ -36,3 +36,30 @@ Using Stern is simply:
       }
   }
 ```
+
+## Docblock Usability 
+
+For better usability (especially with type-aware IDEs like PHPStorm), make sure
+you use [`@method`](https://docs.phpdoc.org/references/phpdoc/tags/method.html)
+docblocks.
+
+```diff
+  <?php
+  declare(strict_types=1);
+  namespace YourVendor\YourNamespace;
+
++   /**
++    * @method bool foo(string $param = '')
++    */
+  class YourClassThatUsesStrictTypes
+  {
++      use \ParagonIE\Stern\SternTrait;
+  
+      /* ... */
+  
+-     public function foo(string $param = ''): bool
++     public function strictFoo(string $param = ''): bool
+      {
+      }
+  }
+```

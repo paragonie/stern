@@ -7,6 +7,11 @@ use ParagonIE\Stern\SternTrait;
 /**
  * Class Weak
  * @package ParagonIE\SternTests
+ *
+ * @method bool weakBool(bool $isWeak = false)
+ * @method string weakString(string $str = '')
+ * @method float weakFloat(float $f)
+ * @method int weakInt(int $int)
  */
 class Weak
 {
@@ -34,7 +39,7 @@ class Weak
      * @param float $f
      * @return float
      */
-    protected function strictWeakFloat(float $f)
+    protected function strictWeakFloat(float $f): float
     {
         return $f;
     }
@@ -43,7 +48,7 @@ class Weak
      * @param int $int
      * @return int
      */
-    protected function strictWeakInt(int $int)
+    protected function strictWeakInt(int $int): int
     {
         return $int + 1;
     }
