@@ -1,10 +1,16 @@
 <?php
 
-class WeakSternTest extends \PHPUnit\Framework\TestCase
+use PHPUnit\Framework\TestCase;
+use ParagonIE\SternTests\Weak;
+
+/**
+ * Class WeakSternTest
+ */
+class WeakSternTest extends TestCase
 {
     public function testWeakBool()
     {
-        $weak = new \ParagonIE\SternTests\Weak();
+        $weak = new Weak();
         $this->assertSame(true, $weak->weakBool(true));
         $this->assertSame(false, $weak->weakBool(false));
         try {
@@ -23,7 +29,7 @@ class WeakSternTest extends \PHPUnit\Framework\TestCase
 
     public function testWeakFloat()
     {
-        $weak = new \ParagonIE\SternTests\Weak();
+        $weak = new Weak();
         $this->assertSame(123.45, $weak->weakFloat(123.45));
         $this->assertSame(12345.0, $weak->weakFloat(12345.0));
 
@@ -37,7 +43,7 @@ class WeakSternTest extends \PHPUnit\Framework\TestCase
 
     public function testWeakInt()
     {
-        $weak = new \ParagonIE\SternTests\Weak();
+        $weak = new Weak();
         $this->assertSame(12345, $weak->weakInt(12344));
 
         try {
@@ -50,7 +56,7 @@ class WeakSternTest extends \PHPUnit\Framework\TestCase
 
     public function testWeakString()
     {
-        $weak = new \ParagonIE\SternTests\Weak();
+        $weak = new Weak();
         $this->assertSame('nccyr', $weak->weakString('apple'));
         $this->assertSame('NCCYR', $weak->weakString('APPLE'));
         $this->assertSame('12345', $weak->weakString('12345'));
@@ -62,5 +68,4 @@ class WeakSternTest extends \PHPUnit\Framework\TestCase
             $this->assertTrue($ex instanceof TypeError);
         }
     }
-
 }

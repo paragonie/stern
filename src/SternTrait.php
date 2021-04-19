@@ -14,7 +14,7 @@ trait SternTrait
      * @return mixed
      * @throws \Error
      */
-    public function __call($name, $arguments)
+    public function __call(string $name, $arguments)
     {
         if (\method_exists($this, 'strict' . $name)) {
             return $this->{'strict' . $name}(...$arguments);
