@@ -1,6 +1,6 @@
 # Stern
 
-[![Build Status](https://travis-ci.org/paragonie/stern.svg?branch=master)](https://travis-ci.org/paragonie/stern)
+[![Build Status](https://github.com/paragonie/stern/actions/workflows/ci.yml/badge.svg)](https://github.com/paragonie/stern/actions)
 [![Latest Stable Version](https://poser.pugx.org/paragonie/stern/v/stable)](https://packagist.org/packages/paragonie/stern)
 [![Latest Unstable Version](https://poser.pugx.org/paragonie/stern/v/unstable)](https://packagist.org/packages/paragonie/stern)
 [![License](https://poser.pugx.org/paragonie/stern/license)](https://packagist.org/packages/paragonie/stern)
