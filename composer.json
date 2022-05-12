@@ -7,6 +7,11 @@
       "ParagonIE\\Stern\\": "src"
     }
   },
+  "autoload-dev": {
+    "psr-4": {
+      "ParagonIE\\SternTests\\": "tests/test-classes"
+    }
+  },
   "require": {
     "php": "^7|^8"
   },
